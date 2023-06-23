@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Store</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <div class="categories">
+          <h2>Категорії</h2>
+          <ul>
+            <li data-category="sports">Спорт</li>
+            <li data-category="clothing">Одяг</li>
+            <li data-category="equipment">Обладнання</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="products" style="display: none">
+          <h2>Товари</h2>
+          <ul></ul>
+        </div>
+      </div>
+
+      <div class="product-info" style="display: none">
+        <h2>Інформація про товари</h2>
+        <p id="product-name"></p>
+        <button id="buy-button">Купити</button>
+        <p id="purchase-message"></p>
+      </div>
+      <div class="form-container">
+        <h2>Оформлення замовлення</h2>
+        <form id="orderForm">
+          <fieldset>
+            <label for="fullName">ПІБ покупця:</label>
+            <input type="text" id="fullName" name="fullName" required />
+            <label for="city">Місто:</label>
+            <select id="city" name="city" required>
+              <option value="">Виберіть місто</option>
+              <option value="Київ">Київ</option>
+              <option value="Львів">Львів</option>
+              <option value="Харків">Харків</option>
+            </select>
+            <label for="postOffice">Склад Нової пошти для надсилання:</label>
+            <input type="text" id="postOffice" name="postOffice" required />
+            <label for="paymentMethod">Спосіб оплати:</label>
+            <input
+              type="radio"
+              id="paymentMethod1"
+              name="paymentMethod"
+              value="Післяплата"
+              required
+            />
+            <label for="paymentMethod1">Післяплата</label>
+            <input
+              type="radio"
+              id="paymentMethod2"
+              name="paymentMethod"
+              value="Оплата банківською карткою"
+              required
+            />
+            <label for="paymentMethod2">Оплата банківською карткою</label>
+            <label for="quantity">Кількість продукції:</label>
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              min="1"
+              required
+            />
+            <label for="comment">Коментар до замовлення:</label>
+            <textarea id="comment" name="comment"></textarea>
+            <button id="btn-form" class="btn-form" type="submit">Купити</button>
+          </fieldset>
+        </form>
+      </div>
+      <div class="order-info">
+        <h2>Інформація про замовлення</h2>
+        <table id="orderTable">
+          <tr>
+            <th>Інформація</th>
+            <th>Значення</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
